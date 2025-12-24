@@ -1,0 +1,137 @@
+[gd_scene load_steps=17 format=3 uid="uid://crjl4qt4o5s0j"]
+
+[ext_resource type="Script" path="res://Script/level_1.gd" id="1_dm7xs"]
+[ext_resource type="Texture2D" uid="uid://cb0c3xvptsqa6" path="res://Free/Background/Brown.png" id="1_wgoi0"]
+[ext_resource type="PackedScene" uid="uid://bmejdhdmsgv8g" path="res://Sence/PLayer.tscn" id="3_8saew"]
+[ext_resource type="PackedScene" uid="uid://cnallojlegy2e" path="res://Sence/tile_map.tscn" id="3_33cdw"]
+[ext_resource type="PackedScene" uid="uid://jxf3c2yvspyy" path="res://Sence/apple.tscn" id="3_jfhgr"]
+[ext_resource type="Texture2D" uid="uid://bf6hy2vin21v5" path="res://Free/Other/Light.png" id="5_ybixs"]
+[ext_resource type="PackedScene" uid="uid://v70j4c6c8ad3" path="res://Sence/banana.tscn" id="6_sv8bv"]
+[ext_resource type="PackedScene" uid="uid://cb4cr2p8yy8fv" path="res://Sence/kiwi.tscn" id="7_t5phc"]
+[ext_resource type="PackedScene" uid="uid://bp38w0oyvbbju" path="res://Sence/end.tscn" id="8_r05jo"]
+[ext_resource type="Script" path="res://Script/l_pos.gd" id="10_m3fqe"]
+[ext_resource type="PackedScene" uid="uid://be738ij25trw" path="res://Sence/cp.tscn" id="11_00mwv"]
+[ext_resource type="PackedScene" uid="uid://bki58xoj1t0rt" path="res://Sence/start_cp.tscn" id="11_em0os"]
+[ext_resource type="FontFile" uid="uid://c4fdy7j6bdqh" path="res://font/Poppins/Poppins-Black.ttf" id="13_g563h"]
+[ext_resource type="Script" path="res://Script/End Script of level/Level1_end.gd" id="13_y087n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_136mg"]
+size = Vector2(1956, 73)
+
+[sub_resource type="FontVariation" id="FontVariation_3lfi2"]
+base_font = ExtResource("13_g563h")
+
+[node name="Level 1" type="Node2D" node_paths=PackedStringArray("FG")]
+script = ExtResource("1_dm7xs")
+FG = NodePath("Fruits")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -617.0
+offset_top = -413.0
+offset_right = 1871.0
+offset_bottom = 1203.0
+texture = ExtResource("1_wgoi0")
+stretch_mode = 1
+
+[node name="TileMap" parent="." instance=ExtResource("3_33cdw")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(237, -10)
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("3_8saew")]
+position = Vector2(237, -10)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+scale = Vector2(10, 10)
+energy = 0.3
+shadow_enabled = true
+texture = ExtResource("5_ybixs")
+
+[node name="Fruits" type="Node2D" parent="."]
+
+[node name="Apple" parent="Fruits" instance=ExtResource("3_jfhgr")]
+position = Vector2(602, 87)
+
+[node name="Banana" parent="Fruits" instance=ExtResource("6_sv8bv")]
+position = Vector2(878, -41)
+
+[node name="Banana2" parent="Fruits" instance=ExtResource("6_sv8bv")]
+position = Vector2(1042, 419)
+
+[node name="Kiwi" parent="Fruits" instance=ExtResource("7_t5phc")]
+position = Vector2(1225, 356)
+
+[node name="Kiwi2" parent="Fruits" instance=ExtResource("7_t5phc")]
+position = Vector2(695, 483)
+
+[node name="l_pos" type="Area2D" parent="."]
+script = ExtResource("10_m3fqe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="l_pos"]
+position = Vector2(138, 182)
+shape = SubResource("RectangleShape2D_136mg")
+
+[node name="cps" type="Node2D" parent="."]
+
+[node name="cp" parent="cps" instance=ExtResource("11_00mwv")]
+position = Vector2(704, 82)
+
+[node name="cp2" parent="cps" instance=ExtResource("11_00mwv")]
+position = Vector2(1213, 258)
+
+[node name="cp3" parent="cps" instance=ExtResource("11_00mwv")]
+position = Vector2(969, 418)
+scale = Vector2(-1, 1)
+
+[node name="StartCP" parent="cps" instance=ExtResource("11_em0os")]
+position = Vector2(225, 39)
+
+[node name="End" parent="cps" node_paths=PackedStringArray("parent") instance=ExtResource("8_r05jo")]
+position = Vector2(427, 545)
+script = ExtResource("13_y087n")
+parent = NodePath("../..")
+
+[node name="Labels" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = 148.0
+offset_top = -138.0
+offset_right = 280.0
+offset_bottom = -112.0
+theme_override_fonts/font = SubResource("FontVariation_3lfi2")
+text = "A and D to Move
+"
+
+[node name="Label4" type="Label" parent="Labels"]
+offset_left = 477.0
+offset_top = -47.0
+offset_right = 680.0
+offset_bottom = -21.0
+theme_override_fonts/font = SubResource("FontVariation_3lfi2")
+text = "Prees \"P\" to pause Game
+"
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 199.0
+offset_top = -116.0
+offset_right = 326.0
+offset_bottom = -90.0
+theme_override_fonts/font = SubResource("FontVariation_3lfi2")
+text = "Space to jump
+"
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 254.0
+offset_top = -91.0
+offset_right = 532.0
+offset_bottom = -65.0
+theme_override_fonts/font = SubResource("FontVariation_3lfi2")
+text = "and you have wall slide and jump
+"
+
+[connection signal="body_entered" from="l_pos" to="l_pos" method="_on_body_entered"]

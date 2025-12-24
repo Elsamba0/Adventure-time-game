@@ -1,0 +1,122 @@
+[gd_scene load_steps=10 format=3 uid="uid://x0e2272i4fam"]
+
+[ext_resource type="Script" path="res://UI/scrpits/levels.gd" id="1_10ql2"]
+[ext_resource type="Texture2D" uid="uid://f85rx73cquje" path="res://Free/Background/Gray.png" id="1_r70dm"]
+[ext_resource type="Texture2D" uid="uid://dd671g4xlyre2" path="res://Free/Menu/Levels/01.png" id="2_w7a5s"]
+[ext_resource type="Texture2D" uid="uid://d17y8pdg1mmc4" path="res://Free/Menu/Levels/02.png" id="3_1cveu"]
+[ext_resource type="Texture2D" uid="uid://c3eby225f1on0" path="res://Free/Menu/Levels/03.png" id="4_y627e"]
+[ext_resource type="Texture2D" uid="uid://b4st5xbfvdcup" path="res://Free/Menu/Levels/04.png" id="5_i4mec"]
+[ext_resource type="Texture2D" uid="uid://mtxo8y1qxf04" path="res://Free/Menu/Levels/05.png" id="6_q82c0"]
+[ext_resource type="Texture2D" uid="uid://bjpcu327v8i0" path="res://Buttons/Buttons/slice/back/None.png" id="7_y0ud8"]
+[ext_resource type="Texture2D" uid="uid://cr51fqnpn6qwl" path="res://Buttons/Buttons/slice/back/Holder.png" id="8_0jhmt"]
+
+[node name="Levels" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_10ql2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -48.0
+offset_right = 56.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_r70dm")
+stretch_mode = 1
+
+[node name="L1" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 232.0
+offset_right = 72.0
+offset_bottom = 272.0
+
+[node name="L1b" type="TextureButton" parent="L1"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 17.0
+scale = Vector2(6, 6)
+texture_normal = ExtResource("2_w7a5s")
+
+[node name="L2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 176.0
+offset_top = 232.0
+offset_right = 216.0
+offset_bottom = 272.0
+
+[node name="L2b" type="TextureButton" parent="L2"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 17.0
+scale = Vector2(6, 6)
+texture_normal = ExtResource("3_1cveu")
+
+[node name="L3" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 320.0
+offset_top = 232.0
+offset_right = 360.0
+offset_bottom = 272.0
+
+[node name="L3b" type="TextureButton" parent="L3"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 17.0
+scale = Vector2(6, 6)
+texture_normal = ExtResource("4_y627e")
+texture_pressed = ExtResource("4_y627e")
+
+[node name="L4" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 464.0
+offset_top = 232.0
+offset_right = 504.0
+offset_bottom = 272.0
+
+[node name="L4b" type="TextureButton" parent="L4"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 17.0
+scale = Vector2(6, 6)
+texture_normal = ExtResource("5_i4mec")
+
+[node name="L5" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 616.0
+offset_top = 232.0
+offset_right = 656.0
+offset_bottom = 272.0
+
+[node name="L5b" type="TextureButton" parent="L5"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 17.0
+scale = Vector2(6, 6)
+texture_normal = ExtResource("6_q82c0")
+
+[node name="Back" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 72.0
+offset_bottom = 48.0
+scale = Vector2(6, 6)
+texture_normal = ExtResource("7_y0ud8")
+texture_pressed = ExtResource("8_0jhmt")
+
+[connection signal="pressed" from="L1/L1b" to="." method="_on_l_1b_pressed"]
+[connection signal="pressed" from="L2/L2b" to="." method="_on_l_2b_pressed"]
+[connection signal="pressed" from="L3/L3b" to="." method="_on_l_3b_pressed"]
+[connection signal="pressed" from="L4/L4b" to="." method="_on_l_4b_pressed"]
+[connection signal="pressed" from="L5/L5b" to="." method="_on_l_5b_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

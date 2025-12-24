@@ -1,0 +1,106 @@
+[gd_scene load_steps=10 format=3 uid="uid://ie5m2pxy2ns0"]
+
+[ext_resource type="Texture2D" uid="uid://c8fmw5qt1gnpc" path="res://Free/Background/Green.png" id="1_82xst"]
+[ext_resource type="Script" path="res://UI/scrpits/set.gd" id="1_k6mqp"]
+[ext_resource type="Texture2D" uid="uid://bjpcu327v8i0" path="res://Buttons/Buttons/slice/back/None.png" id="2_7wjq0"]
+[ext_resource type="Texture2D" uid="uid://cr51fqnpn6qwl" path="res://Buttons/Buttons/slice/back/Holder.png" id="3_hx114"]
+[ext_resource type="FontFile" uid="uid://c4fdy7j6bdqh" path="res://font/Poppins/Poppins-Black.ttf" id="5_xdfha"]
+
+[sub_resource type="FontVariation" id="FontVariation_din77"]
+base_font = ExtResource("5_xdfha")
+
+[sub_resource type="Animation" id="Animation_vbnbi"]
+resource_name = "anim"
+length = 1.6
+loop_mode = 1
+step = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Comeing Soon .", "Comeing Soon ..", "Comeing Soon ...", "Comeing Soon ....", "Comeing Soon ....."]
+}
+
+[sub_resource type="Animation" id="Animation_3mx0k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Comeing Soon ."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v2gqv"]
+_data = {
+"RESET": SubResource("Animation_3mx0k"),
+"anim": SubResource("Animation_vbnbi")
+}
+
+[node name="Set" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k6mqp")
+
+[node name="BackGround" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -88.0
+offset_top = -80.0
+offset_right = 1208.0
+offset_bottom = 736.0
+texture = ExtResource("1_82xst")
+stretch_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(0.7, 0.7)
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 96.0
+offset_top = 472.0
+offset_right = 136.0
+offset_bottom = 512.0
+
+[node name="Back" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = -128.0
+offset_right = 400.0
+offset_bottom = -112.0
+scale = Vector2(7, 7)
+texture_normal = ExtResource("2_7wjq0")
+texture_pressed = ExtResource("3_hx114")
+texture_hover = ExtResource("3_hx114")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 256.0
+offset_right = 855.0
+offset_bottom = 302.0
+theme_override_fonts/font = SubResource("FontVariation_din77")
+theme_override_font_sizes/font_size = 50
+text = "Comeing Soon ."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_v2gqv")
+}
+
+[connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]

@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdopvsxabft4j"]
+
+[ext_resource type="Script" path="res://UI/scrpits/win.gd" id="1_d8y7i"]
+[ext_resource type="Texture2D" uid="uid://bj1fs3d6c20r3" path="res://Free/Background/Yellow.png" id="1_sdn7d"]
+[ext_resource type="Texture2D" uid="uid://bdgvyd8gre326" path="res://Buttons/Buttons/slice/Menu/none.png" id="2_dm606"]
+[ext_resource type="Texture2D" uid="uid://d2ec1qfpmwjy2" path="res://Buttons/Buttons/slice/Menu/Holder.png" id="3_rphvr"]
+[ext_resource type="FontFile" uid="uid://c4fdy7j6bdqh" path="res://font/Poppins/Poppins-Black.ttf" id="4_o0mkl"]
+
+[node name="Win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d8y7i")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -384.0
+offset_top = -128.0
+offset_right = 1496.0
+offset_bottom = 816.0
+texture = ExtResource("1_sdn7d")
+stretch_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 336.0
+offset_right = 616.0
+offset_bottom = 352.0
+scale = Vector2(5, 5)
+texture_normal = ExtResource("2_dm606")
+texture_pressed = ExtResource("3_rphvr")
+texture_hover = ExtResource("3_rphvr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 299.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("4_o0mkl")
+theme_override_font_sizes/font_size = 50
+text = "You Win :)"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 112.0
+offset_right = 1095.0
+offset_bottom = 260.0
+theme_override_fonts/font = ExtResource("4_o0mkl")
+theme_override_font_sizes/font_size = 50
+text = "Thank's for play 
+and download the game"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 312.0
+offset_right = 1111.0
+offset_bottom = 460.0
+theme_override_fonts/font = ExtResource("4_o0mkl")
+theme_override_font_sizes/font_size = 25
+text = "Game Creator Ahmed Samier
+Levels texture Creator Hezza 
+"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
