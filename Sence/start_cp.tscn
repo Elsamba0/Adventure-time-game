@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://bki58xoj1t0rt"]
 
-[ext_resource type="Script" path="res://Script/start_cp.gd" id="1_5ibho"]
+[ext_resource type="Script" uid="uid://dfnn55wmmj2rp" path="res://Script/start_cp.gd" id="1_5ibho"]
 [ext_resource type="Texture2D" uid="uid://bo0w6bumy7p6l" path="res://Free/Items/Checkpoints/Start/Start (Idle).png" id="1_wgjeu"]
 [ext_resource type="Texture2D" uid="uid://cqekuolqyiqry" path="res://Free/Items/Checkpoints/Start/Start (Moving) (64x64).png" id="3_5t4c4"]
 

@@ -142,4 +142,3 @@ func _on_animated_sprite_2d_animation_finished():
 	if anim.animation == "disapp":
 		anim_lock = true
 		position = respone_pos
-	pass # Replace with function body.

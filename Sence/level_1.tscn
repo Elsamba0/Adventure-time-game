@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://crjl4qt4o5s0j"]
 
-[ext_resource type="Script" path="res://Script/level_1.gd" id="1_dm7xs"]
+[ext_resource type="Script" uid="uid://ckbrtf2msa76p" path="res://Script/level_1.gd" id="1_dm7xs"]
 [ext_resource type="Texture2D" uid="uid://cb0c3xvptsqa6" path="res://Free/Background/Brown.png" id="1_wgoi0"]
 [ext_resource type="PackedScene" uid="uid://bmejdhdmsgv8g" path="res://Sence/PLayer.tscn" id="3_8saew"]
 [ext_resource type="PackedScene" uid="uid://cnallojlegy2e" path="res://Sence/tile_map.tscn" id="3_33cdw"]
@@ -9,11 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://v70j4c6c8ad3" path="res://Sence/banana.tscn" id="6_sv8bv"]
 [ext_resource type="PackedScene" uid="uid://cb4cr2p8yy8fv" path="res://Sence/kiwi.tscn" id="7_t5phc"]
 [ext_resource type="PackedScene" uid="uid://bp38w0oyvbbju" path="res://Sence/end.tscn" id="8_r05jo"]
-[ext_resource type="Script" path="res://Script/l_pos.gd" id="10_m3fqe"]
+[ext_resource type="Script" uid="uid://epqvflyo0ibg" path="res://Script/l_pos.gd" id="10_m3fqe"]
 [ext_resource type="PackedScene" uid="uid://be738ij25trw" path="res://Sence/cp.tscn" id="11_00mwv"]
 [ext_resource type="PackedScene" uid="uid://bki58xoj1t0rt" path="res://Sence/start_cp.tscn" id="11_em0os"]
 [ext_resource type="FontFile" uid="uid://c4fdy7j6bdqh" path="res://font/Poppins/Poppins-Black.ttf" id="13_g563h"]
-[ext_resource type="Script" path="res://Script/End Script of level/Level1_end.gd" id="13_y087n"]
+[ext_resource type="Script" uid="uid://dfe3gbdpyigu6" path="res://Script/End Script of level/Level1_end.gd" id="13_y087n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_136mg"]
 size = Vector2(1956, 73)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://b2ig33daworfk"]
 
 [ext_resource type="Texture2D" uid="uid://cb0c3xvptsqa6" path="res://Free/Background/Brown.png" id="1_q74p3"]
-[ext_resource type="Script" path="res://Script/level_1.gd" id="1_r6xer"]
+[ext_resource type="Script" uid="uid://ckbrtf2msa76p" path="res://Script/level_1.gd" id="1_r6xer"]
 [ext_resource type="PackedScene" uid="uid://cnallojlegy2e" path="res://Sence/tile_map.tscn" id="2_jgknr"]
 [ext_resource type="PackedScene" uid="uid://bmejdhdmsgv8g" path="res://Sence/PLayer.tscn" id="3_defgl"]
 [ext_resource type="Texture2D" uid="uid://bf6hy2vin21v5" path="res://Free/Other/Light.png" id="4_rarml"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cwna321ro6hmh" path="res://Sence/spike.tscn" id="8_485w7"]
 [ext_resource type="PackedScene" uid="uid://cb4cr2p8yy8fv" path="res://Sence/kiwi.tscn" id="8_ms2rx"]
 [ext_resource type="PackedScene" uid="uid://bp38w0oyvbbju" path="res://Sence/end.tscn" id="11_ohp7t"]
-[ext_resource type="Script" path="res://Script/End Script of level/Level4_end.gd" id="12_p8stu"]
+[ext_resource type="Script" uid="uid://kjwl70mu03xa" path="res://Script/End Script of level/Level4_end.gd" id="12_p8stu"]
 
 [node name="Level4" type="Node2D" node_paths=PackedStringArray("FG")]
 script = ExtResource("1_r6xer")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwna321ro6hmh"]
 
 [ext_resource type="Texture2D" uid="uid://b4ve3rks2xo2s" path="res://Free/Traps/Spikes/Idle.png" id="1_jcnw0"]
-[ext_resource type="Script" path="res://Script/spike.gd" id="1_mdufy"]
+[ext_resource type="Script" uid="uid://bamfvggchstw0" path="res://Script/spike.gd" id="1_mdufy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_241ii"]
 size = Vector2(11, 4)

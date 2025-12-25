@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://v70j4c6c8ad3"]
 
-[ext_resource type="Script" path="res://Script/banana.gd" id="1_vgy50"]
+[ext_resource type="Script" uid="uid://df5vg2jfnfvsu" path="res://Script/banana.gd" id="1_vgy50"]
 [ext_resource type="Texture2D" uid="uid://ckn772wspgiox" path="res://Free/Items/Fruits/Collected.png" id="2_j4dy1"]
 [ext_resource type="Texture2D" uid="uid://bnwele0v0jeku" path="res://Free/Items/Fruits/Bananas.png" id="3_7ym1a"]
 

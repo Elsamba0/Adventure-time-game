@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bct8m0eaautyq"]
 
-[ext_resource type="Script" path="res://UI/scrpits/transions.gd" id="1_yi8ke"]
+[ext_resource type="Script" uid="uid://coyiwihvrkmam" path="res://UI/scrpits/transions.gd" id="1_yi8ke"]
 
 [sub_resource type="Animation" id="Animation_w1pw3"]
 length = 0.001
@@ -38,9 +38,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c6nv5"]
 _data = {
-"RESET": SubResource("Animation_w1pw3"),
-"REST": SubResource("Animation_osg42"),
-"fade": SubResource("Animation_1ds7a")
+&"RESET": SubResource("Animation_w1pw3"),
+&"REST": SubResource("Animation_osg42"),
+&"fade": SubResource("Animation_1ds7a")
 }
 
 [node name="Transions" type="CanvasLayer"]

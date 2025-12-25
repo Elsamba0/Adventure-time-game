@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bgrm2hk2yf63o"]
 
-[ext_resource type="Script" path="res://Script/level_1.gd" id="1_4qbfv"]
+[ext_resource type="Script" uid="uid://ckbrtf2msa76p" path="res://Script/level_1.gd" id="1_4qbfv"]
 [ext_resource type="Texture2D" uid="uid://cb0c3xvptsqa6" path="res://Free/Background/Brown.png" id="1_d6eap"]
 [ext_resource type="PackedScene" uid="uid://cnallojlegy2e" path="res://Sence/tile_map.tscn" id="2_elhsp"]
 [ext_resource type="PackedScene" uid="uid://bmejdhdmsgv8g" path="res://Sence/PLayer.tscn" id="3_md76f"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://v70j4c6c8ad3" path="res://Sence/banana.tscn" id="7_jqpj5"]
 [ext_resource type="PackedScene" uid="uid://jxf3c2yvspyy" path="res://Sence/apple.tscn" id="8_dhpl1"]
 [ext_resource type="PackedScene" uid="uid://cwna321ro6hmh" path="res://Sence/spike.tscn" id="8_jh7na"]
-[ext_resource type="Script" path="res://Script/End Script of level/Level3_end.gd" id="8_v4rep"]
+[ext_resource type="Script" uid="uid://18svxwvf8ktd" path="res://Script/End Script of level/Level3_end.gd" id="8_v4rep"]
 [ext_resource type="PackedScene" uid="uid://cb4cr2p8yy8fv" path="res://Sence/kiwi.tscn" id="9_mt51r"]
 
 [node name="Level3" type="Node2D" node_paths=PackedStringArray("FG")]

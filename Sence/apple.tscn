@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://jxf3c2yvspyy"]
 
-[ext_resource type="Script" path="res://Script/apple.gd" id="1_14xoj"]
+[ext_resource type="Script" uid="uid://c1ave0d5el1qc" path="res://Script/apple.gd" id="1_14xoj"]
 [ext_resource type="Texture2D" uid="uid://ca1fe10rnv1s1" path="res://Free/Items/Fruits/Apple.png" id="1_n0cir"]
 [ext_resource type="Texture2D" uid="uid://ckn772wspgiox" path="res://Free/Items/Fruits/Collected.png" id="2_vagff"]
 

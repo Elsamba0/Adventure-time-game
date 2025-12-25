@@ -2,6 +2,8 @@ extends Control
 
 @onready var anim = $AnimationPlayer
 
+var paused : bool = false
+
 func _ready():
 	anim.play("RESET")
 
@@ -17,8 +19,14 @@ func pus():
 func testEec():
 	if Input.is_action_just_pressed("pus") and !get_tree().paused:
 		pus()
+		paused = true
+		visible = true
+		mouse_filter = Control.MOUSE_FILTER_STOP
 	elif Input.is_action_just_pressed("pus") and get_tree().paused:
 		con()
+		paused = false
+		visible = false
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _on_continue_pressed():
 	con()
@@ -38,3 +46,9 @@ func _on_main_menu_pressed():
 
 func _physics_process(_delta):
 	testEec()
+	mouse_ignore()
+
+func mouse_ignore():
+	for b in get_children():
+		if b is TextureButton:
+			b.disabled = paused

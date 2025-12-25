@@ -1,13 +1,28 @@
 [gd_scene load_steps=10 format=3 uid="uid://ie5m2pxy2ns0"]
 
 [ext_resource type="Texture2D" uid="uid://c8fmw5qt1gnpc" path="res://Free/Background/Green.png" id="1_82xst"]
-[ext_resource type="Script" path="res://UI/scrpits/set.gd" id="1_k6mqp"]
+[ext_resource type="Script" uid="uid://djmcmpaeu5f3q" path="res://UI/scrpits/set.gd" id="1_k6mqp"]
 [ext_resource type="Texture2D" uid="uid://bjpcu327v8i0" path="res://Buttons/Buttons/slice/back/None.png" id="2_7wjq0"]
 [ext_resource type="Texture2D" uid="uid://cr51fqnpn6qwl" path="res://Buttons/Buttons/slice/back/Holder.png" id="3_hx114"]
 [ext_resource type="FontFile" uid="uid://c4fdy7j6bdqh" path="res://font/Poppins/Poppins-Black.ttf" id="5_xdfha"]
 
 [sub_resource type="FontVariation" id="FontVariation_din77"]
 base_font = ExtResource("5_xdfha")
+
+[sub_resource type="Animation" id="Animation_3mx0k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Comeing Soon ."]
+}
 
 [sub_resource type="Animation" id="Animation_vbnbi"]
 resource_name = "anim"
@@ -27,25 +42,10 @@ tracks/0/keys = {
 "values": ["Comeing Soon .", "Comeing Soon ..", "Comeing Soon ...", "Comeing Soon ....", "Comeing Soon ....."]
 }
 
-[sub_resource type="Animation" id="Animation_3mx0k"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["Comeing Soon ."]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v2gqv"]
 _data = {
-"RESET": SubResource("Animation_3mx0k"),
-"anim": SubResource("Animation_vbnbi")
+&"RESET": SubResource("Animation_3mx0k"),
+&"anim": SubResource("Animation_vbnbi")
 }
 
 [node name="Set" type="Control"]
@@ -100,7 +100,7 @@ text = "Comeing Soon ."
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_v2gqv")
+&"": SubResource("AnimationLibrary_v2gqv")
 }
 
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
