@@ -52,13 +52,13 @@ texture = ExtResource("4_tqtyb")
 position = Vector2(24, 8)
 scale = Vector2(-1, 1)
 
-[node name="cp" parent="cps" instance=ExtResource("6_ewql1")]
+[node name="cp4" parent="cps" instance=ExtResource("6_ewql1")]
 position = Vector2(-446, -14)
 
-[node name="cp3" parent="cps" instance=ExtResource("6_ewql1")]
+[node name="cp" parent="cps" instance=ExtResource("6_ewql1")]
 position = Vector2(-2840, 354)
 
-[node name="cp2" parent="cps" instance=ExtResource("6_ewql1")]
+[node name="cp3" parent="cps" instance=ExtResource("6_ewql1")]
 position = Vector2(-1640, 66)
 
 [node name="End" parent="cps" node_paths=PackedStringArray("parent") instance=ExtResource("7_28s3c")]

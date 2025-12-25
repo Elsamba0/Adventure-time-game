@@ -78,13 +78,13 @@ shape = SubResource("RectangleShape2D_136mg")
 
 [node name="cps" type="Node2D" parent="."]
 
-[node name="cp" parent="cps" instance=ExtResource("11_00mwv")]
+[node name="cp4" parent="cps" instance=ExtResource("11_00mwv")]
 position = Vector2(704, 82)
 
-[node name="cp2" parent="cps" instance=ExtResource("11_00mwv")]
+[node name="cp" parent="cps" instance=ExtResource("11_00mwv")]
 position = Vector2(1213, 258)
 
-[node name="cp3" parent="cps" instance=ExtResource("11_00mwv")]
+[node name="cp2" parent="cps" instance=ExtResource("11_00mwv")]
 position = Vector2(969, 418)
 scale = Vector2(-1, 1)
 
